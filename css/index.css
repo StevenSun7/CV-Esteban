@@ -440,14 +440,570 @@ input[type=radio] {
 }
 
 
-/*---------- RESPONSI 768 Tablet -----------*/
+/*----------------------------------- RESPONSI 768 Tablet ----------------------------------*/
 /*MODIFICAR ALGUNAS CLASES PARA CORREGIR LOS ERRORES*/
+
 @media only screen and (max-width: 768px){
+    body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
     
-}
+    .body {
+            display: grid;
+            gap: 7px;
+            grid-template-areas: 'header header'
+                        'container-info container-info'
+                                'footer footer';
+        }
+    
+        .header {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .name {
+            grid-column: 1/3;
+            width: 85vw;
+            display: flex;
+            align-items: center;
+            
+            margin-top: 1vw;
+            padding-bottom: 1vw;
+        }
+    
+        .nameEsteban {
+            width: 65%;
+        }
+    
+        .parrafoName {
+            margin: 1px;
+        }
+    
+        .menu {
+            grid-column: 1/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .navegacion > ul {
+            /* display: flex;
+                padding: 0%;
+                text-align: center;
+                list-style: none; */
+        }
+    
+        .nav-inicio,
+        .nav-contacto {
+            /* display: flex;
+                text-decoration: none;
+                color: #a7976d;
+                margin: 1rem;
+                background-color: #222;
+                border-radius: 6px;
+                width: 6rem;
+                height: 1.7rem;
+                justify-content: center;
+                align-items: center; */
+        }
+    
+        .nav-inicio:hover {
+            /* color: #fff;
+                background-color: #a7976d;
+                transform: scale(1.1); */
+        }
+    
+        .nav-contacto:hover {
+            /* color: #fff;
+                background-color: #a7976d;
+                transform: scale(1.1); */
+        }
+    
+    
+        /*--- CONTINER-INFO ---- RESPONSI 768 Tablet ----------------------------------*/
+    
+        .container-info {
+            /* display: grid;
+                grid-template-columns: repeat(4, auto);
+                grid-template-rows: repeat(3, auto);
+                height: 25%; */
+        }
+    
+        .FotoPerfil {
+            /* grid-column: 1 / 3;
+                grid-row: 1 / 4;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                margin-left: 5vw; */
+        }
+    
+        .imgEsteban {
+            /* width: 20vw;
+                height: 20vw;
+                border-radius: 50%;
+                background-image: url(/img/fondo\ oficina\ I.jpg);
+                background-size: 160%;
+                animation: img-Fondo 10s infinite linear alternate; */
+        }
+    
+        .presentación {
+            /* grid-column: 3 / -1;
+                grid-row: 1 / 2;
+                display: flex;
+                justify-content: left; */
+        }
+    
+        .presentación > h1 {
+            /* display: flex;
+                align-items: center;
+                padding-left: 7rem; */
+        }
+    
+        .container_slider {
+            /* grid-column: 3 / -1;
+                grid-row: 2 / 3;
+                height: 10vw; */
+        }
+    
+        .container {
+            /* width: 35vw;
+                height: 12vw;
+                margin-left: 10vw;
+                transform-style: preserve-3d;
+                display: flex;
+                justify-content: center;
+                align-items: center; */
+        }
+    
+        .cards {
+            /* position: relative;
+                width: 19vw;
+                height: 10vw; */
+        }
+    
+        .card {
+            /* position: absolute;
+                width: 60%;
+                height: 100%;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); */
+        }
+    
+        .img-sliders {
+            /* width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                -o-object-fit: cover;
+                object-fit: cover; */
+        }
+    
+        #item-2:checked ~ .cards #selector-1,
+        #item-1:checked ~ .cards #selector-3,
+        #item-3:checked ~ .cards #selector-2 {
+            transform: translateX(-80%) scale(0.8);
+            opacity: 0.6;
+            z-index: 0;
+        }
+    
+        #item-3:checked ~ .cards #selector-1,
+        #item-1:checked ~ .cards #selector-2,
+        #item-2:checked ~ .cards #selector-3 {
+            transform: translateX(80%) scale(0.8);
+            opacity: 0.6;
+            z-index: 0;
+        }
+    
+        #item-1:checked ~ .cards #selector-1,
+        #item-2:checked ~ .cards #selector-2,
+        #item-3:checked ~ .cards #selector-3 {
+            transform: translateX(0) scale(1);
+            z-index: 1;
+        }
+    
+        .Comentario {
+            /* grid-column: 3 / -1;
+                grid-row: 2 / 3;
+                padding-left: 5rem;
+                display: flex;
+                align-items: center; */
+        }
+    
+        .parrafo-comentario {
+            /* display: flex;
+                justify-content: center; */
+        }
+    
+        /*------ FOOTER ------- RESPONSI 768 Tablet ----------------------------------*/
+    
+        .footer {
+            /* display: grid;
+                grid-template-columns: repeat(5, auto);
+                grid-template-rows: repeat(3, auto);
+                padding-top: 1rem;
+                margin-top: 2rem;
+                background-color: #222;
+                border-top: solid 2px #a7976d;
+                height: 20rem;
+                justify-content: space-around; */
+        }
+    
+        .div-redes {
+            /* grid-column: 1 / 2;
+                grid-row: 1 / 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 250px; */
+        }
+    
+        .div-redes > a {
+            /* display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #a7976d;
+                width: 10px;
+                height: 1rem;
+                margin: 1rem;
+                padding-right: 7rem; */
+        }
+    
+        .div-redes > a:hover {
+            /* transform: scale(1.1);
+                color: #fff; */
+        }
+    
+        .tituloRedes {
+            /* color: #a7976d;
+                display: flex;
+                justify-content: center;
+                width: 9rem;
+                height: 1rem; */
+        }
+    
+        .logo-instagram,
+        .logo-github,
+        .logo-twitter,
+        .logo-facebook {
+            /* width: 300%;
+                margin-right: 7px; */
+        }
+    
+        .div-cv {
+            /* grid-column: 3 / 4;
+                grid-row: 1 / 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 154px;
+                height: 250px; */
+        }
+    
+        .titulo-cv {
+            /* color: #a7976d;
+                display: flex;
+                justify-content: center;
+                height: 1rem; */
+        }
+    
+        .div-cv > a {
+            /* display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #a7976d;
+                width: 10px;
+                height: 1rem;
+                margin: 1rem;
+                padding-right: 7rem; */
+        }
+    
+        .logo-linkedin {
+            /* width: 300%;
+                margin-right: 7px; */
+        }
+    
+        .qrlinkedin {
+            /* width: 65%;
+                display: flex;
+                margin-left: -12px; */
+        }
+    
+        .div-cv > a {
+            /* display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #a7976d;
+                width: 10px;
+                padding-right: 7rem; */
+        }
+    
+        .imgdownload {
+            /* width: 300%;
+                margin-right: 7px; */
+        }
+    
+        .contfooter {
+            /* grid-column: 5 / 6;
+                grid-row: 1 / 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 154px;
+                height: 250px; */
+        }
+    
+        .titulo-cont {
+            /* color: #a7976d;
+                display: flex;
+                justify-content: center;
+                height: 1rem; */
+        }
+    
+        .a-telegram,
+        .a-whatsapp,
+        .a-mail {
+            /* display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #a7976d;
+                width: 10px;
+                height: 1rem;
+                margin: 1rem;
+                padding-right: 7rem; */
+        }
+    
+        .logo-telegram,
+        .logo-whatsapp {
+            /* width: 300%;
+                margin-right: 7px; */
+        }
+    
+        .logo-mail {
+            /* width: 300%;
+                margin-right: 7px; */
+        }
+    
+        .div-derechos {
+            /* grid-column: 1 / -1;
+                grid-row: 3 / 4;
+                display: flex;
+                height: 2rem;
+                color: #a7976d;
+                justify-content: center;
+                border-top: solid 0.1px #a7976d; */
+        }
+    
+        .derechos {
+            /* display: flex;
+                align-items: center; */
+        }
+    }
 
 
-/*---------- RESPONSI 320 Mobile -----------*/
-@media only screen and (max-width: 320px){
+
+
+/*----------------------------------- RESPONSI 414 Mobile ----------------------------------*/
+@media only screen and (max-width: 414px){
+
+    .body {
+            display: grid;
+            gap: 7px;
+            grid-template-areas: 'header'
+                            'container-info'
+                                'footer';
+        }
     
+        .header {
+            
+        }
+    
+        .name {
+            
+        }
+    
+        .nameEsteban {
+            
+        }
+    
+        .parrafoName {
+            margin: 1px;
+        }
+    
+        .menu {
+            
+        }
+    
+        .navegacion > ul {
+            
+        }
+    
+        .nav-inicio,
+        .nav-contacto {
+            
+        }
+    
+    
+        /*--- CONTINER-INFO ---- RESPONSI 414 Mobile ----------------------------------*/
+    
+        .container-info {
+            
+        }
+    
+        .FotoPerfil {
+            
+        }
+    
+        .imgEsteban {
+            
+        }
+    
+        .presentación {
+            
+        }
+    
+        .presentación > h1 {
+            
+        }
+    
+        .container_slider {
+            
+        }
+    
+        .container {
+            
+        }
+    
+        .cards {
+            
+        }
+    
+        .card {
+            
+        }
+    
+        .img-sliders {
+            
+        }
+    
+        #item-2:checked ~ .cards #selector-1,
+        #item-1:checked ~ .cards #selector-3,
+        #item-3:checked ~ .cards #selector-2 {
+            transform: translateX(-80%) scale(0.8);
+            opacity: 0.6;
+            z-index: 0;
+        }
+    
+        #item-3:checked ~ .cards #selector-1,
+        #item-1:checked ~ .cards #selector-2,
+        #item-2:checked ~ .cards #selector-3 {
+            transform: translateX(80%) scale(0.8);
+            opacity: 0.6;
+            z-index: 0;
+        }
+    
+        #item-1:checked ~ .cards #selector-1,
+        #item-2:checked ~ .cards #selector-2,
+        #item-3:checked ~ .cards #selector-3 {
+            transform: translateX(0) scale(1);
+            z-index: 1;
+        }
+    
+        .Comentario {
+            
+        }
+    
+        .parrafo-comentario {
+            
+        }
+    
+        /*------ FOOTER ------- RESPONSI 414 Mobile ----------------------------------*/
+    
+        .footer {
+            
+        }
+    
+        .div-redes {
+            
+        }
+    
+        .div-redes > a {
+            
+        }
+    
+        .tituloRedes {
+            
+        }
+    
+        .logo-instagram,
+        .logo-github,
+        .logo-twitter,
+        .logo-facebook {
+            
+        }
+
+        .div-cv {
+            
+        }
+    
+        .titulo-cv {
+            
+        }
+    
+        .div-cv > a {
+            
+        }
+    
+        .logo-linkedin {
+            
+        }
+    
+        .qrlinkedin {
+            
+        }
+    
+        .div-cv > a {
+            
+        }
+    
+        .imgdownload {
+            
+        }
+    
+        .contfooter {
+            
+        }
+    
+        .titulo-cont {
+            
+        }
+    
+        .a-telegram,
+        .a-whatsapp,
+        .a-mail {
+            
+        }
+    
+        .logo-telegram,
+        .logo-whatsapp {
+            
+        }
+    
+        .logo-mail {
+            
+        }
+    
+        .div-derechos {
+            
+        }
+    
+        .derechos {
+            
+        }
 }
