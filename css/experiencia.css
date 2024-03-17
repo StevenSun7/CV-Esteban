@@ -492,7 +492,21 @@ input[type=radio] {
             justify-content: center;
         }
     
+        .container_slider{
+            height: 28vw;
+            align-items: center;
+            margin-bottom: 20%;
+        }
 
+        .img-sliders {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 10px;
+        }
+
+        .container{
+            margin-bottom: 22%;
+        }
     
     
         /*--- CONTINER-INFO ---- RESPONSI 768 Tablet ----------------------------------*/
